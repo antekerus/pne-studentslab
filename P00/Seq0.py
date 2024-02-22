@@ -26,15 +26,15 @@ def seq_len():
         file_contents = Path(FILENAME).read_text()
         first_line_i = file_contents.find("\n")
         sequence = file_contents[first_line_i:]
-        sequence = sequence.replace("\n", "")
+        seq = sequence.replace("\n", "")
         if i == 0:
-            u5 += sequence
+            u5 += seq
         elif i == 1:
-            ada += sequence
+            ada += seq
         elif i == 2:
-            frat1 += sequence
+            frat1 += seq
         elif i == 3:
-            fxn += sequence
+            fxn += seq
     u5_length = len(u5)
     ada_length = len(ada)
     frat1_length = len(frat1)

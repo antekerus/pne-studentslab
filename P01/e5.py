@@ -1,0 +1,11 @@
+from Seq1 import Seq
+print("-----| Practice 1, Exercise 5 |------")
+s1 = Seq()
+s2 = Seq("ACTGA")
+s3 = Seq("AXHEY")
+print(f"Sequence 0: (Length: {s1.len()}) {s1}")
+print(f"\tA: {s1.count_base('A')}, C: {s1.count_base('C')}, G: {s1.count_base('G')}, T: {s1.count_base('T')}")
+print(f"Sequence 1: (Length: {s2.len()}) {s2}")
+print(f"\tA: {s2.count_base('A')}, C: {s2.count_base('C')}, G: {s2.count_base('G')}, T: {s2.count_base('T')}")
+print(f"Sequence 2: (Length: {s3.len()}) {s3}")
+print(f"\tA: {s3.count_base('A')}, C: {s3.count_base('C')}, G: {s3.count_base('G')}, T: {s3.count_base('T')}")
