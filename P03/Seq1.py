@@ -2,6 +2,7 @@ from pathlib import Path
 
 class Seq1:
     BASES = ['A', 'C', 'T', 'G']
+    BASES_VALUE = {"A": 2, "C": -1, "G": 3, "T": 5}
     COMPLEMENTS = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
 
     @staticmethod
@@ -36,7 +37,7 @@ class Seq1:
         return self.bases
 
     def len(self):
-        if self.bases == "NULL" or self.bases == "ERROR":
+        if self.bases == "NULL" or self.bases == "ERROR": #if s.is_valid()
             return 0
         else:
             return len(self.bases)
@@ -116,3 +117,16 @@ class Seq1:
             percentage = (count * 100) / self.len()
             result += f"{base}: {count} ({percentage:.1f}%)\n"
         return result
+
+    def mult(self):
+        if self.bases == "NULL" or self.bases == "ERROR":
+            return 0
+        else:
+            total = 1
+            for base in self.bases:
+                total *= Seq1.BASES_VALUE[base]
+            return total
+
+    def is_valid(self):
+        return self.bases != "ERROR" and self.bases != "NULL"
+
