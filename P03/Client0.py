@@ -1,14 +1,15 @@
 import socket
+
 class Client:
-    def __init__(self, ip, port):
+    def __init__(self, ip: str, port: int):
         self.ip = ip
         self.port = port
 
-    def ping(self):
-        print("OK!")
-
     def __str__(self):
-        return f"Connection to SERVER at {self.ip}, PORT: {self.port}"
+        return f"Connection to SERVER at {self.ip}, PORT :{self.port}"
+
+    def ping(self):
+        print("OK")
 
     def talk(self, msg):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
