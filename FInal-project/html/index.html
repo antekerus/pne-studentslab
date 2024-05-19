@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!!</title>
+</head>
+<body style="background-color: lightblue">
+    <h1>Browsing Human and Vertebrates genome</h1>
+    <h2>BASIC Level Services</h2>
+
+    <form action="/listSpecies">
+        <p>1)List of species in the genome database</p>
+        Limit: <input type="text" name="limit">
+        <input type="submit" value="Send">
+    </form>
+
+     <form action="/karyotype">
+        <p>2)Information about the karyotype</p>
+        Select the species: <input type="text" name="species">
+        <input type="submit" value="Send">
+    </form>
+
+    <form action="/chromosomeLength">
+        <p>3)Chromosome Length</p>
+        Select the species: <input type="text" name="specie">
+        <br>
+        Select a chromosome: <input type="text" name="chromo">
+        <br>
+        <input type="submit" value="Send">
+    </form>
+    <h2>MEDIUM Level Services</h2>
+    <form action="/geneSeq">
+        <p>4)Return the sequence of the human gene</p>
+        Select the human gene: <input type="text" name="gene">
+        <input type="submit" value="Send">
+    </form>
+
+    <form action="/geneInfo">
+        <p>5)Return information about the human gene</p>
+        Select the human gene: <input type="text" name="gene">
+        <input type="submit" value="Send">
+    </form>
+
+    <form action="/geneCalc">
+        <p>6)Calculations</p>
+        Select the human gene: <input type="text" name="gene">
+        <input type="submit" value="Send">
+    </form>
+
+    <form action="/geneList">
+        <p>7)Return the names of the genes located in the chromosome</p>
+        Select the chromosome: <input type="text" name="chromo"><br>
+        Start: <input type="text" name="start"><br>
+        End: <input type="text" name="end"><br>
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
